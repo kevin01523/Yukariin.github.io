@@ -23,7 +23,7 @@ def convert(input_file, output_file):
 			out_data["translation"][crc_str] = val
 
 	with open(output_file, 'w') as out_file:
-	    json.dump(out_data, out_file)
+	    json.dump(out_data, out_file, indent=4, sort_keys=True)
 
 if __name__ == "__main__":
 	parser = argparse.ArgumentParser(description='Convert raw data to crc.')
